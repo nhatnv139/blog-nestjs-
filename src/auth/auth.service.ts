@@ -20,7 +20,7 @@ export class AuthService {
     const hashPassword = await this.hashPassword(registerUserDto.password);
     return await this.userRepository.save({
       ...registerUserDto,
-      refresh_token: 'refreshtokenstring',
+      // refresh_token: 'refreshtokenstring',
       password: hashPassword,
     });
   }
